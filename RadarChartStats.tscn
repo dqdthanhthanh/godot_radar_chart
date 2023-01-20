@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/RadarChart/RadarChartStats.gd" type="Script" id=1]
+[ext_resource path="res://addons/RadarChart/DrawStats.gd" type="Script" id=2]
+[ext_resource path="res://addons/RadarChart/Draw.gd" type="Script" id=3]
+
+[node name="RadarChartStats" type="Control"]
+anchor_left = 0.00078125
+anchor_right = 0.0625
+anchor_bottom = 0.105556
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="RadarChart" type="Node2D" parent="."]
+position = Vector2( 40, 40 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Base" type="Node2D" parent="RadarChart"]
+script = ExtResource( 3 )
+
+[node name="point1" type="Node2D" parent="RadarChart/Base"]
+position = Vector2( 96, -248 )
+
+[node name="point2" type="Node2D" parent="RadarChart/Base"]
+position = Vector2( 248, -96 )
+
+[node name="point3" type="Node2D" parent="RadarChart/Base"]
+position = Vector2( 248, 104 )
+
+[node name="point4" type="Node2D" parent="RadarChart/Base"]
+position = Vector2( 96, 240 )
+
+[node name="point5" type="Node2D" parent="RadarChart/Base"]
+position = Vector2( -104, 240 )
+
+[node name="point6" type="Node2D" parent="RadarChart/Base"]
+position = Vector2( -256, 104 )
+
+[node name="point7" type="Node2D" parent="RadarChart/Base"]
+position = Vector2( -256, -88 )
+
+[node name="point8" type="Node2D" parent="RadarChart/Base"]
+position = Vector2( -104, -248 )
+
+[node name="Stats" type="Node2D" parent="RadarChart"]
+script = ExtResource( 2 )
+
+[node name="point1" type="Node2D" parent="RadarChart/Stats"]
+position = Vector2( 44.4444, -114.815 )
+
+[node name="point2" type="Node2D" parent="RadarChart/Stats"]
+position = Vector2( 114.815, -44.4444 )
+
+[node name="point3" type="Node2D" parent="RadarChart/Stats"]
+position = Vector2( 114.815, 48.1481 )
+
+[node name="point4" type="Node2D" parent="RadarChart/Stats"]
+position = Vector2( 44.4444, 111.111 )
+
+[node name="point5" type="Node2D" parent="RadarChart/Stats"]
+position = Vector2( -48.1481, 111.111 )
+
+[node name="point6" type="Node2D" parent="RadarChart/Stats"]
+position = Vector2( -118.519, 48.1481 )
+
+[node name="point7" type="Node2D" parent="RadarChart/Stats"]
+position = Vector2( -118.519, -40.7407 )
+
+[node name="point8" type="Node2D" parent="RadarChart/Stats"]
+position = Vector2( -48.1481, -114.815 )
+
+[node name="Label" type="Node2D" parent="RadarChart"]
